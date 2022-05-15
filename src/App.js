@@ -42,8 +42,8 @@ export default function App() {
           <Card hoverable cover css={{ w: "100%" }}>
             <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
               <Col>
-                <Text size={12} weight="bold" color="#ffffffAA">
-                  HI THERE✌️
+                <Text transform="uppercase" size={12} weight="bold" color="#ffffffAA">
+                  HI THERE
                 </Text>
                 <Text
                   h3
@@ -53,6 +53,10 @@ export default function App() {
                   }}
                 >
                   I'm Grace Huynh
+
+                </Text>
+                <Text size={12} weight="bold" color="#ffffffAA">
+                  And trust me I'm a developer 👌
                 </Text>
               </Col>
             </Card.Header>
