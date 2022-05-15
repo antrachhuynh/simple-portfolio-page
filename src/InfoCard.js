@@ -9,14 +9,18 @@ import {
     Link,
 
 } from "@nextui-org/react";
-import Trach from './trach.jpg';
+import Trach from './trach.webp';
 
 import { Col, Row } from "@nextui-org/react";
+
+
+
 
 export default function InfoCard() {
 
     return (
         <Container xs>
+
             <Card hoverable cover css={{ w: "100%" }}>
                 <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                     <Col>
@@ -38,7 +42,9 @@ export default function InfoCard() {
                         </Text>
                     </Col>
                 </Card.Header>
+
                 <Card.Body>
+
                     <Card.Image
                         src={Trach}
                         height={400}
@@ -46,13 +52,14 @@ export default function InfoCard() {
                         alt="Card example background"
                         css={'color:black'}
                     />
+
                 </Card.Body>
                 <Card.Footer
                     blur
                     css={{
                         position: "absolute",
                         bgBlur: "#000",
-                        borderTop: "$borderWeights$light solid rgba(0, 0, 0, 0.9)",
+                        borderTop: "$borderWeights$light solid rgba(255, 78, 205, 0.2)",
                         bottom: 0,
                         zIndex: 1,
                     }}

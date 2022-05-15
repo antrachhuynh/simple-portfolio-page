@@ -8,7 +8,6 @@ import {
 
 } from "@nextui-org/react";
 
-import { useState } from "react";
 import useLocalStorage from 'use-local-storage'
 
 
@@ -37,19 +36,23 @@ const StyledApp = styled("div", {
 
 export default function App() {
   // The light theme is used by default
-  const [isDarkTheme, setIsDarkTheme] = useLocalStorage(false);
+  const [isLightTheme, setIsLightTheme] = useLocalStorage(true);
+
+
+
+
 
   // This function is triggered when the Switch component is toggled
   const changeTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
+    setIsLightTheme(!isLightTheme);
   };
 
   return (
-    <NextUIProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-
+    <NextUIProvider theme={isLightTheme ? lightTheme : darkTheme}>
       <StyledApp className="App">
         <InfoCard />
-        <Switch css={{ top: 10, right: 10, position: 'fixed' }} checked={isDarkTheme} onChange={changeTheme} />
+
+        <Switch color="secondary" css={{ top: 10, right: 10, position: 'fixed' }} checked={!isLightTheme} onChange={changeTheme} />
       </StyledApp >
     </NextUIProvider >
   );
